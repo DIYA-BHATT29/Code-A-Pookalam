@@ -25,7 +25,7 @@ Click the **Fork** button at the top right of this repository to create your own
 
 ### 2️⃣ Clone Your Fork
 ```bash
-git clone https://github.com/[YOUR-USERNAME]/CODE-A-POOKALAM-2025-COMPETITION.git
+git clone https://github.com/[YOUR-USERNAME]/Code-A-Pookalam.git.git
 ```
 
 ### 3️⃣ Edit This README
@@ -58,7 +58,7 @@ Share your forked repository link with the organizers by **August 31, 2026**!
 2. **✏️ Edit README**: Replace this README with your submission details
 3. **💻 Any Language**: Use any programming language you're comfortable with
 4. **🎨 Be Creative**: Let your imagination run wild with colors, patterns, and designs
-5. **⏰ Deadline**: Submit your repository link by **September 6, 2025, 11:59 PM IST**
+5. **⏰ Deadline**: Submit your repository link by **August 31 2026, 11:59 PM IST**
 6. **🤝 Be Respectful**: Keep your code clean and family-friendly
 7. **📸 Include Output**: Add screenshots or images of your Pookalam
 8. **✅ Original Work**: Submit only your original code
@@ -112,7 +112,7 @@ open index.html
 
 ## 📁 File Structure
 ```
-Code-a-Pookalam-2025/
+Code-A-Pookalam/
 ├── README.md (this file)
 ├── pookalam.py (or your main file)
 └── requirements.txt (if applicable)
