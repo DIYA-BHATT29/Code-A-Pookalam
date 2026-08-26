@@ -2,7 +2,7 @@
 
 
 # 🌸𝓒𝓸𝓭𝓮 ~ 𝓐 ~ 𝓟𝓸𝓸𝓴𝓪𝓵𝓪𝓶🌸
-### *Welcome to CODE-A-പൂക്കളം, a creative coding challenge where tradition meets technology! 🌼*
+### *Welcome to 𝓒𝓸𝓭𝓮 ~ 𝓐 ~ 𝓟𝓸𝓸𝓴𝓪𝓵𝓪𝓶, a creative coding challenge where tradition meets technology! 🌼*
 
 ---
 
