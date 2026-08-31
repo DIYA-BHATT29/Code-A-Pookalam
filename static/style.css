@@ -1,0 +1,893 @@
+@import url(
+    'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap'
+);
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+:root {
+
+    --gold: #f4c34f;
+
+    --light-gold: #ffe9a4;
+
+    --pink: #d6296c;
+
+    --orange: #ef7917;
+
+    --green: #17472e;
+
+    --cream: #fff3d0;
+
+    --dark: #080604;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    font-family:
+        Poppins,
+        sans-serif;
+
+    color: var(--cream);
+
+    background:
+
+        radial-gradient(
+            circle at 50% 45%,
+            #392918 0%,
+            #1b130c 35%,
+            #090705 72%,
+            #030302 100%
+        );
+
+}
+
+
+
+/* =====================================================
+   AMBIENT LIGHT
+===================================================== */
+
+.ambient-glow {
+
+    position: fixed;
+
+    width: 850px;
+
+    height: 850px;
+
+    left: 50%;
+
+    top: 47%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(245,180,55,.14),
+            transparent 68%
+        );
+
+    filter: blur(45px);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    width:
+        min(1200px, 94%);
+
+    margin: auto;
+
+    padding:
+        20px 0 0;
+
+    display: grid;
+
+    grid-template-columns:
+        135px
+        1fr
+        135px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    position: relative;
+
+    z-index: 20;
+
+}
+
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.title {
+
+    text-align: center;
+
+}
+
+
+.title h1 {
+
+    font-family:
+        "Noto Serif Malayalam",
+        serif;
+
+    font-size:
+        clamp(
+            2.1rem,
+            5vw,
+            4.5rem
+        );
+
+    line-height: 1;
+
+    color:
+        var(--gold);
+
+    text-shadow:
+
+        0 0 12px
+        rgba(245,196,81,.3),
+
+        0 0 35px
+        rgba(245,196,81,.12);
+
+}
+
+
+.title h2 {
+
+    margin-top: 8px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            1rem,
+            2vw,
+            1.5rem
+        );
+
+    letter-spacing: 7px;
+
+}
+
+
+.title p {
+
+    margin-top: 6px;
+
+    font-size: .7rem;
+
+    color:
+        #d7b86e;
+
+}
+
+
+
+/* =====================================================
+   HEADER BUTTON
+===================================================== */
+
+.header-control {
+
+    min-height: 85px;
+
+    border:
+        1px solid
+        rgba(245,196,81,.65);
+
+    border-radius: 17px;
+
+    background:
+        rgba(25,18,10,.75);
+
+    color:
+        var(--light-gold);
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    backdrop-filter:
+        blur(10px);
+
+    transition:
+        .35s ease;
+
+}
+
+
+.header-control:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 0 30px
+        rgba(245,196,81,.25);
+
+}
+
+
+.control-icon {
+
+    font-size: 1.9rem;
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(255,185,40,.8)
+        );
+
+}
+
+
+.header-control div:last-child {
+
+    font-size: .55rem;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+/* =====================================================
+   POOKALAM AREA
+===================================================== */
+
+.pookalam-area {
+
+    width:
+        min(850px, 94vw);
+
+    aspect-ratio: 1;
+
+    margin:
+        0 auto;
+
+    position: relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+}
+
+
+
+/* =====================================================
+   AURA
+===================================================== */
+
+.pookalam-aura {
+
+    position: absolute;
+
+    width: 82%;
+
+    height: 82%;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,190,50,.2),
+            rgba(255,150,30,.06) 48%,
+            transparent 70%
+        );
+
+    filter:
+        blur(35px);
+
+    animation:
+        auraPulse
+        3s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+@keyframes auraPulse {
+
+    from {
+
+        transform: scale(.94);
+
+        opacity: .65;
+
+    }
+
+    to {
+
+        transform: scale(1.06);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   CANVAS
+===================================================== */
+
+#pookalamCanvas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 5;
+
+    filter:
+        drop-shadow(
+            0 25px 30px
+            rgba(0,0,0,.65)
+        );
+
+    /* Slow Pookalam rotation */
+    animation: pookalamRotate 45s linear infinite;
+
+    transform-origin: center center;
+}
+
+
+@keyframes pookalamRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =====================================================
+   DIYAS
+===================================================== */
+
+.diya {
+
+    position: absolute;
+
+    z-index: 10;
+
+    font-size:
+        clamp(
+            1.7rem,
+            4vw,
+            3rem
+        );
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            #ffae00
+        );
+
+    animation:
+        diyaFlicker
+        1.5s
+        infinite
+        alternate;
+
+}
+
+
+.diya-one {
+
+    top: 4%;
+
+    left: 2%;
+
+}
+
+
+.diya-two {
+
+    top: 4%;
+
+    right: 2%;
+
+}
+
+
+.diya-three {
+
+    bottom: 5%;
+
+    left: 2%;
+
+}
+
+
+.diya-four {
+
+    bottom: 5%;
+
+    right: 2%;
+
+}
+
+
+@keyframes diyaFlicker {
+
+    from {
+
+        transform: scale(.94);
+
+        filter:
+            drop-shadow(
+                0 0 7px
+                #ff9d00
+            );
+
+    }
+
+    to {
+
+        transform: scale(1.1);
+
+        filter:
+            drop-shadow(
+                0 0 25px
+                #ffd75c
+            );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   EFFECT PANEL
+===================================================== */
+
+.effects-panel {
+
+    width:
+        min(900px, 94%);
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 9px;
+
+    position: relative;
+
+    z-index: 20;
+
+}
+
+
+.effect-button {
+
+    min-height: 78px;
+
+    border:
+        1px solid
+        rgba(245,196,81,.4);
+
+    border-radius: 16px;
+
+    background:
+        rgba(28,20,12,.84);
+
+    color:
+        var(--light-gold);
+
+    cursor: pointer;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap: 5px;
+
+    transition:
+        .3s ease;
+
+}
+
+
+.effect-button:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--gold);
+
+    box-shadow:
+        0 0 25px
+        rgba(245,196,81,.18);
+
+}
+
+
+.effect-button.active {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        var(--gold);
+
+    background:
+        rgba(88,54,19,.8);
+
+    box-shadow:
+        0 0 25px
+        rgba(245,196,81,.22);
+
+}
+
+
+.effect-icon {
+
+    font-size: 1.35rem;
+
+}
+
+
+.effect-button span:last-child {
+
+    font-size: .58rem;
+
+    letter-spacing: .4px;
+
+}
+
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.effect-message {
+
+    text-align: center;
+
+    min-height: 30px;
+
+    margin-top: 13px;
+
+    color:
+        #d9b967;
+
+    font-size: .75rem;
+
+    position: relative;
+
+    z-index: 20;
+
+}
+
+
+
+/* =====================================================
+   FLOWER RAIN
+===================================================== */
+
+.rain-flower {
+
+    position: fixed;
+
+    top: -50px;
+
+    z-index: 100;
+
+    pointer-events: none;
+
+    animation:
+        fall
+        linear
+        forwards;
+
+}
+
+
+@keyframes fall {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform:
+            translate(
+                var(--drift),
+                110vh
+            )
+            rotate(700deg);
+
+        opacity: .1;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+.sparkle {
+
+    position: fixed;
+
+    width: 4px;
+
+    height: 4px;
+
+    border-radius: 50%;
+
+    background:
+        #ffe8a1;
+
+    box-shadow:
+
+        0 0 7px
+        #ffd052,
+
+        0 0 18px
+        #ffae21;
+
+    pointer-events: none;
+
+    z-index: 90;
+
+    animation:
+        sparkle
+        1.8s
+        ease-out
+        forwards;
+
+}
+
+
+@keyframes sparkle {
+
+    0% {
+
+        transform:
+            scale(0);
+
+        opacity: 0;
+
+    }
+
+    40% {
+
+        transform:
+            scale(2);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            scale(.2);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding:
+        15px 10px 25px;
+
+    color:
+        #c5a75d;
+
+    font-size: .72rem;
+
+    position: relative;
+
+    z-index: 20;
+
+}
+
+
+footer small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    opacity: .55;
+
+    font-size: .6rem;
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px) {
+
+    .header {
+
+        grid-template-columns:
+            65px
+            1fr
+            65px;
+
+        gap: 7px;
+
+    }
+
+
+    .header-control {
+
+        min-height: 65px;
+
+        border-radius: 12px;
+
+    }
+
+
+    .control-icon {
+
+        font-size: 1.3rem;
+
+    }
+
+
+    .header-control div:last-child {
+
+        font-size: .4rem;
+
+    }
+
+
+    .title h1 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .title h2 {
+
+        font-size: .75rem;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .title p {
+
+        font-size: .48rem;
+
+    }
+
+
+    .effects-panel {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .effect-button {
+
+        min-height: 68px;
+
+    }
+
+
+    .effect-button span:last-child {
+
+        font-size: .5rem;
+
+    }
+
+}
