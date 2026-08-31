@@ -6,7 +6,6 @@ const canvas =
 const ctx =
     canvas.getContext("2d");
 
-
 let W = 900;
 
 let H = 900;
