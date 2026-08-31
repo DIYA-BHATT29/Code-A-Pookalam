@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ഓണാശംസകൾ | Virtual Athapookalam</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+    <!-- Background decorative elements -->
+
+    <div class="ambient-glow"></div>
+
+    <div id="petalRain"></div>
+
+    <div id="sparkles"></div>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <button
+            class="header-control"
+            onclick="toggleLamps()">
+
+            <div class="control-icon">
+                🪔
+            </div>
+
+            <div id="lampText">
+                LIGHT LAMPS
+            </div>
+
+        </button>
+
+
+        <div class="title">
+
+            <h1>
+                ഓണാശംസകൾ
+            </h1>
+
+            <h2>
+                HAPPY ONAM
+            </h2>
+
+            <p>
+                പൂക്കളുടെ സൗന്ദര്യത്തിൽ ഒരുമയുടെ ഓണം
+            </p>
+
+        </div>
+
+
+        <button
+            class="header-control"
+            onclick="toggleMusic()">
+
+            <div class="control-icon">
+                ♫
+            </div>
+
+            <div>
+                ONAM MUSIC
+            </div>
+
+        </button>
+
+    </header>
+
+
+
+    <!-- ================= POOKALAM ================= -->
+
+    <main>
+
+        <section class="pookalam-area">
+
+            <div class="pookalam-aura"></div>
+
+
+            <canvas
+                id="pookalamCanvas">
+            </canvas>
+
+
+            <!-- Four traditional lamps -->
+
+            <div class="diya diya-one">
+                🪔
+            </div>
+
+            <div class="diya diya-two">
+                🪔
+            </div>
+
+            <div class="diya diya-three">
+                🪔
+            </div>
+
+            <div class="diya diya-four">
+                🪔
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= EFFECT CONTROLS ================= -->
+
+        <section class="effects-panel">
+
+
+            <button
+                class="effect-button active"
+                data-effect="bloom"
+                onclick="setEffect('bloom')">
+
+                <span class="effect-icon">
+                    🌸
+                </span>
+
+                <span>
+                    BLOOM
+                </span>
+
+            </button>
+
+
+            <button
+                class="effect-button"
+                data-effect="rain"
+                onclick="setEffect('rain')">
+
+                <span class="effect-icon">
+                    🌼
+                </span>
+
+                <span>
+                    FLOWER RAIN
+                </span>
+
+            </button>
+
+
+            <button
+                class="effect-button"
+                data-effect="lamp"
+                onclick="setEffect('lamp')">
+
+                <span class="effect-icon">
+                    🪔
+                </span>
+
+                <span>
+                    LAMP GLOW
+                </span>
+
+            </button>
+
+
+            <button
+                class="effect-button"
+                data-effect="wave"
+                onclick="setEffect('wave')">
+
+                <span class="effect-icon">
+                    ≋
+                </span>
+
+                <span>
+                    PETAL WAVE
+                </span>
+
+            </button>
+
+
+            <button
+                class="effect-button"
+                data-effect="color"
+                onclick="setEffect('color')">
+
+                <span class="effect-icon">
+                    🌀
+                </span>
+
+                <span>
+                    COLOR FLOW
+                </span>
+
+            </button>
+
+
+            <button
+                class="effect-button"
+                data-effect="sparkle"
+                onclick="setEffect('sparkle')">
+
+                <span class="effect-icon">
+                    ✦
+                </span>
+
+                <span>
+                    SPARKLE
+                </span>
+
+            </button>
+
+        </section>
+
+
+        <div
+            class="effect-message"
+            id="effectMessage">
+
+            ✨ Click any effect to bring the Pookalam alive ✨
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+            🌿 Kerala • Onam • Flowers • Tradition • Togetherness 🌿
+        </div>
+
+        <small>
+            A celebration of Kerala's floral heritage
+        </small>
+
+    </footer>
+
+
+
+    <!-- Optional music -->
+
+    <audio
+        id="onamMusic"
+        loop>
+
+        <source
+            src="{{ url_for('static', filename='onam.mp3') }}"
+            type="audio/mpeg">
+
+    </audio>
+
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}">
+    </script>
+
+</body>
+
+</html>
