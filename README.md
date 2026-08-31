@@ -116,8 +116,47 @@ virtual_athapookalam/
     ├── style.css
     ├── script.js
     └── onam.mp3
+------------------
+## 🚀 How to Run
 
+Make sure you have the following installed:
+
+- 🐍 **Python 3.x**
+- 🌐 **Flask**
+- 🖥️ **A modern web browser**
+
+---
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/DIYA-BHATT29/Code-A-Pookalam.git
+cd Code-A-Pookalam
 ```
+
+### 2️⃣ Install Flask
+
+```bash
+pip install flask
+```
+
+Or:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Run the Application
+
+```bash
+python app.py
+```
+
+The application will run at:
+
+```text
+http://127.0.0.1:5000
+```
+
 ##  Happy Onam!✨
 *Submitted for Code-A-Pookalam 2026 by TinkerHub LBSITW*
 ```
