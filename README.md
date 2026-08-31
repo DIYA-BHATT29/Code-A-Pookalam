@@ -5,7 +5,7 @@
 ### *Welcome to 𝓒𝓸𝓭𝓮 ~ 𝓐 ~ 𝓟𝓸𝓸𝓴𝓪𝓵𝓪𝓶, a creative coding challenge where tradition meets technology! 🌼*
 
 ---
-# 🌸 Diya Bhatt A's Code-A-Pookalam 2026 🌸
+# 🌸 Diya Bhatt A's Virtual Athapookalam – Tradition in Motion 2026 🌸
 
 ## 👩‍💻 About Me
 
